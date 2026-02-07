@@ -1,0 +1,86 @@
+  /* =========================
+    Certification Section
+  ========================= */
+  .certification-container {
+    padding: 50px 20px;
+    background-color: #f9fafb;
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* =========================
+    Certification Card
+  ========================= */
+  .certification-container .cert-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* =========================
+    Certificate Details
+  ========================= */
+  .certification-container .cert-card .cert-details {
+    text-align: center;
+  }
+
+  .certification-container .cert-card .cert-details .cert-course {
+    font-size: 1.8rem;
+    color: #111827;
+    margin-bottom: 10px;
+  }
+
+  .certification-container .cert-card .cert-details .cert-institute,
+  .certification-container .cert-card .cert-details .cert-date {
+    font-size: 1rem;
+    color: #6b7280;
+    margin: 4px 0;
+  }
+
+  /* =========================
+    Certificate Image
+  ========================= */
+  .certification-container .cert-card .cert-badge {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .certification-container .cert-card .cert-badge img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #e5e7eb;
+  }
+
+  /* =========================
+    Responsive (Tablet & Up)
+  ========================= */
+  @media (min-width: 768px) {
+    .certification-container .cert-card {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    .certification-container .cert-card .cert-details {
+      flex: 1;
+    }
+
+    .certification-container .cert-card .cert-badge {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }

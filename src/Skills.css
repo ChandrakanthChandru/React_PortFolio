@@ -1,0 +1,120 @@
+/* =======================
+   Skills Section
+======================= */
+.skills-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =======================
+   MagicBento Background
+======================= */
+.skills-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* =======================
+   Title
+======================= */
+.skills-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 60px;
+  color: #a855f7;
+}
+
+/* =======================
+   Grid Layout
+======================= */
+.skills-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* =======================
+   Skill Card
+======================= */
+.skill-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(79, 70, 229, 0.4);
+}
+
+/* =======================
+   Skill Logo
+======================= */
+.skill-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 16px;
+
+  /* 🔥 Make dark logos visible */
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+
+/* =======================
+   Skill Name
+======================= */
+.skill-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+/* =======================
+   Progress Bar
+======================= */
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* =======================
+   Responsive
+======================= */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skill-card {
+    padding: 24px 16px;
+  }
+}

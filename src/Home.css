@@ -1,0 +1,206 @@
+  /* =======================
+    Global Reset
+  ======================= */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+  }
+
+  /* =======================
+    Home Wrapper
+  ======================= */
+  .home-wrapper {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* =======================
+    Background (Hyperspeed)
+  ======================= */
+  .background-layer {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  /* Ensure canvas fills screen */
+  .background-layer canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Optional dark overlay for readability */
+  .background-layer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at top,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.85)
+    );
+  }
+
+  /* =======================
+    Main Container
+  ======================= */
+  .home-container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 80px 20px;
+  }
+
+  /* =======================
+    Main Content
+  ======================= */
+  .home-main {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  /* =======================
+    Intro Section
+  ======================= */
+  .intro h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .name {
+    color: #ff3c3c;
+  }
+
+  .intro h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .typing {
+    color: #00eaff;
+  }
+
+  .intro p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #dcdcdc;
+    max-width: 800px;
+  }
+
+  /* =======================
+    About Section
+  ======================= */
+  .about {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+  }
+
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: #ff3c3c;
+  }
+
+  .about p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #dcdcdc;
+  }
+
+  /* =======================
+    Contact Section
+  ======================= */
+  .contact {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00eaff;
+  }
+
+  /* Profile Image */
+  .profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    border: 3px solid #00eaff;
+    box-shadow: 0 0 30px rgba(0, 234, 255, 0.4);
+  }
+
+  /* Contact Text */
+  .contact p {
+    font-size: 1rem;
+    color: #dcdcdc;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  /* Links */
+  .contact a {
+    color: #ff3c3c;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 4px;
+  }
+
+  .contact a:hover {
+    text-decoration: underline;
+  }
+
+  /* =======================
+    Responsive Design
+  ======================= */
+  @media (max-width: 768px) {
+    .intro h1 {
+      font-size: 2.3rem;
+    }
+
+    .intro h3 {
+      font-size: 1.4rem;
+    }
+
+    .home-main {
+      gap: 60px;
+    }
+
+    .about {
+      padding: 30px 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .intro h1 {
+      font-size: 2rem;
+    }
+
+    .intro p {
+      font-size: 0.95rem;
+    }
+
+    .profile-image {
+      width: 130px;
+      height: 130px;
+    }
+  }

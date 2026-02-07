@@ -1,0 +1,196 @@
+/* =========================
+   Projects Section
+========================= */
+.projects-section {
+  position: relative;
+  padding: 10px 20px;
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at top,
+    rgba(10, 10, 25, 0.4),
+    rgba(5, 5, 15, 0.85)
+  );
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Soft overlay for readability */
+.projects-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: 0;
+}
+
+/* =========================
+   Title
+========================= */
+.projects-title {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 60px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   Grid Layout
+========================= */
+.projects-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Project Card
+========================= */
+.project-card {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  padding: 28px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.project-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 70px rgba(0, 234, 255, 0.25);
+}
+
+/* =========================
+   Card Content
+========================= */
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #00eaff;
+}
+
+.project-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  color: #e5e7eb;
+}
+
+/* =========================
+   Features List
+========================= */
+.project-features {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 18px;
+}
+
+.project-features li {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #d1d5db;
+}
+
+/* =========================
+   Tech Stack
+========================= */
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.project-stack span {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  background: rgba(0, 234, 255, 0.15);
+  color: #00eaff;
+  border: 1px solid rgba(0, 234, 255, 0.3);
+}
+
+/* =========================
+   Links / Buttons
+========================= */
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn.live {
+  background: #00eaff;
+  color: #020617;
+  font-weight: 600;
+}
+
+.btn.live:hover {
+  background: #38bdf8;
+}
+
+.btn.github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.btn.github:hover {
+  background: #ffffff;
+  color: #020617;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 2.1rem;
+  }
+
+  .project-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 1.8rem;
+  }
+
+  .project-desc {
+    font-size: 0.95rem;
+  }
+}
